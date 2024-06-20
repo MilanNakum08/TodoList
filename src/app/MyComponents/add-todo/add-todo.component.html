@@ -1,0 +1,17 @@
+<div class="my-3">
+    <h4>Add new Todo</h4>
+    <form (ngSubmit)="onSubmit()" #todoForm="ngForm"  >
+        <div class="mb-3">
+          <label for="title" class="form-label">Todo title</label>
+          <input type="text" [(ngModel)]="title" class="form-control" name="title" id="title" required #titleInput="ngModel">
+            <div *ngIf="titleInput.invalid && titleInput.touched" class="text-danger">
+                Title is required.
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="desc" class="form-label">Description</label>
+          <input type="text" class="form-control" name="desc" id="desc" [(ngModel)]="desc">
+        </div>
+        <button type="submit" class="btn btn-sm btn-primary" [disabled]="todoForm.invalid">Add Todo</button>
+    </form>
+</div>

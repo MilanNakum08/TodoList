@@ -1,0 +1,13 @@
+.strike{
+    text-decoration: line-through;
+}
+
+.todo-content {
+    background-color: #d3d3d3; /* Light grey background color */
+    padding: 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

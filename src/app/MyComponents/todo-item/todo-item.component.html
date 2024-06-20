@@ -1,0 +1,16 @@
+<div class="my-3">
+    <div class="todo-content d-flex align-items-start">
+        <div class="flex-grow-1">
+            <h5 [ngClass]="{'strike': !cptodo.active}">{{ i + 1 }}. {{ cptodo.title }}</h5>
+            <p [ngClass]="{'strike': !cptodo.active}">{{ cptodo.desc }}</p>
+        </div>
+        <div class="ms-auto">
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(cptodo)" [checked]="!cptodo.active">
+                <label class="form-check-label" for="todo{{i}}">Done</label>
+            </div>
+            <button *ngIf="!cptodo.active" class="btn btn-sm btn-danger" (click)="onClick(cptodo)">Delete</button>
+        </div>
+    </div>
+    <hr style="width: 100%;">
+</div>

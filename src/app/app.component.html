@@ -1,0 +1,34 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark custom-bg">
+    <div class="container-fluid">
+      <a class="navbar-brand fancy-text" routerLink="/" routerLinkActive="active">
+        <i class="fas fa-list"></i> Todos
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+          <li class="nav-item">
+            <a class="nav-link nav-link-hover" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-hover" routerLink="/about" routerLinkActive="active">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+<footer class="footer text-center my-4">
+  Made with <span class="text-danger">❤️</span> by Milan Nakum
+  <div class="social-icons">
+      <a href="https://www.instagram.com/_its_milann__/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/MilanNakum08" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/milan-nakum-8a8a51233/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</footer>
+
+<!-- ////"outputPath": "dist/todo-list", -->

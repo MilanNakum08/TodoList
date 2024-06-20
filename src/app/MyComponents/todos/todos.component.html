@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="text-center mb-3">Your Todo-List</h1>
+
+    <!-- <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo> -->
+    <div class="d-flex justify-content-between mb-3">
+        <button class="btn btn-sm btn-primary" (click)="showAddTodo = true">Add New Todo</button>
+        <button class="btn btn-sm btn-danger" (click)="deleteAllTodos()">Delete All</button>
+    </div>
+
+    <app-add-todo *ngIf="showAddTodo" (todoAdd)="addTodo($event); showAddTodo = false;"></app-add-todo>
+
+    <!-- <h4>Your Todos </h4> -->
+
+    <div *ngIf="this.todos.length===0;else elseBlock"> No Todos to Display.  </div>
+    <ng-template #elseBlock> 
+        <hr>
+        <div *ngFor="let todo of todos; index as i">
+            <app-todo-item [cptodo]="todo" [i]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item> 
+            <!-- cptodo is a child property chhe  todo-item ni -->
+        </div>
+    </ng-template>
+</div>
