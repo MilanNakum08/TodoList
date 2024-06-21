@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![image](https://github.com/MilanNakum08/TodoList/assets/141490590/85696deb-4a37-45a2-a53c-119ebb31e065)
 
+![image](https://github.com/MilanNakum08/TodoList/assets/141490590/8cafd38b-5c64-4b33-830b-e6354b33f145)
 
 ## Development server
 
